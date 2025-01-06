@@ -16,9 +16,17 @@ L'approche consiste à :
 ## Structure du Projet
 
 Le projet est organisé de manière professionnelle selon la structure suivante :
-
-├── data/ # Dossier contenant les jeux de données bruts et traités ├── notebooks/ # Notebooks Jupyter pour exploration et expérimentation │ ├── 01_exploration.ipynb # Analyse exploratoire des données (EDA) │ ├── 02_preprocessing.ipynb # Pré-traitement des données │ ├── 03_clustering_models.ipynb # Expérimentation avec différents modèles de clustering │ └── 04_evaluation.ipynb # Évaluation et analyse comparative des résultats ├── scripts/ # Scripts pour exécuter les différentes étapes de l'analyse ├── results/ # Résultats et visualisations générés par les modèles ├── requirements.txt # Liste des dépendances Python nécessaires └── README.md # Fichier de description du projet
-
+```
+├── data/ # Dossier contenant les jeux de données bruts et traités
+├── notebooks/ # Notebooks Jupyter pour exploration et expérimentation
+│ ├── 01_exploration.ipynb # Analyse exploratoire des données (EDA)
+│ ├── 02_preprocessing.ipynb # Pré-traitement des données
+│ ├── 03_clustering_models.ipynb # Expérimentation avec différents modèles de clustering
+│ └── 04_evaluation.ipynb # Évaluation et analyse comparative des résultats
+├── scripts/ # Scripts pour exécuter les différentes étapes de l'analyse
+├── results/ # Résultats et visualisations générés par les modèles
+├── requirements.txt # Liste des dépendances Python nécessaires └── README.md # Fichier de description du projet
+```
 
 ---
 
@@ -70,7 +78,7 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
    cd votre-projet
 
 2. Installez les dépendances :
-   ```bas
+   ```bash
    pip install -r requirements.txt
    ```
 
@@ -82,8 +90,57 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
    jupyter notebook
    ```
 2. Ouvrez le fichier notebooks/projet_clutering.ipynb.
-Ce fichier contient tout le code pour :
-* Explorer les données.
-* Effectuer le prétraitement.
-* Appliquer des modèles de clustering (K-Means, GMM, Bisecting K-Means).
-* Évaluer les performances des modèles.
+   Ce fichier contient tout le code pour :
+   * Explorer les données.
+   * Effectuer le prétraitement.
+   * Appliquer des modèles de clustering (K-Means, GMM, Bisecting K-Means).
+   * Évaluer les performances des modèles.
+
+## Données
+
+Les données utilisées sont des informations sur les clients, leurs habitudes d'achat, et leurs réponses aux campagnes marketing.
+
+### Description des colonnes principales
+
+| **Attribut**              | **Description**                                                              |
+|----------------------------|------------------------------------------------------------------------------|
+| `ID`                      | Identifiant unique du client                                                 |
+| `Year_Birth`              | Année de naissance                                                          |
+| `Education`               | Niveau d'éducation                                                          |
+| `Marital_Status`          | Statut marital                                                              |
+| `Income`                  | Revenu annuel                                                               |
+| `Kidhome`                 | Nombre de jeunes enfants dans le foyer                                      |
+| `Teenhome`                | Nombre d'adolescents dans le foyer                                          |
+| `Dt_Customer`             | Date d'enregistrement dans la base de données                               |
+| `Recency`                 | Nombre de jours depuis le dernier achat                                     |
+| `MntWines`                | Montant dépensé sur les vins                                                |
+| `MntFruits`               | Montant dépensé sur les fruits                                              |
+| `MntMeatProducts`         | Montant dépensé sur les produits carnés                                     |
+| `MntFishProducts`         | Montant dépensé sur les produits de la mer                                  |
+| `MntSweetProducts`        | Montant dépensé sur les produits sucrés                                     |
+| `MntGoldProds`            | Montant dépensé sur les produits en or                                      |
+| `NumDealsPurchases`       | Nombre d'achats avec une remise ou dans une offre promotionnelle            |
+| `NumWebPurchases`         | Nombre d'achats réalisés via le site web                                    |
+| `NumCatalogPurchases`     | Nombre d'achats réalisés via des catalogues                                 |
+| `NumStorePurchases`       | Nombre d'achats réalisés en magasin                                         |
+| `NumWebVisitsMonth`       | Nombre de visites sur le site web au cours du dernier mois                  |
+| `AcceptedCmp1` à `AcceptedCmp5` | Indicateurs binaires (1 ou 0) d'acceptation des campagnes marketing        |
+| `Complain`                | Indicateur binaire (1 ou 0) si le client a déposé une plainte               |
+| `Z_CostContact`           | Coût constant associé à la prise de contact                                 |
+| `Z_Revenue`               | Revenu constant associé à une réponse positive                             |
+| `Response`                | Réponse binaire (1 ou 0) à la dernière campagne marketing                   |
+
+## Résultats attendus
+
+L'objectif principal de ce projet est de segmenter efficacement les clients afin de permettre à l'entreprise d'optimiser ses campagnes marketing et d'améliorer ses performances commerciales. Voici les résultats attendus :  
+
+### 1. **Segmentation des clients**
+- Création de groupes homogènes de clients basés sur leurs comportements d'achat, leurs caractéristiques démographiques et leur interaction avec les campagnes marketing.  
+
+### 2. **Visualisation des clusters**
+- Production de graphiques illustrant les clusters.  
+
+### 3. **Analyse des performances des modèles**
+- Comparaison des résultats des algorithmes de clustering (K-Means, GMM, Bisecting K-Means) à l'aide des métriques suivantes :
+  - Silohouette score pour les trois algorithmes.
+  - Log-likelihood, BIC et AIC pour GMM.
