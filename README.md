@@ -18,3 +18,68 @@ L'approche consiste à :
 Le projet est organisé de manière professionnelle selon la structure suivante :
 
 ├── data/ # Dossier contenant les jeux de données bruts et traités ├── notebooks/ # Notebooks Jupyter pour exploration et expérimentation │ ├── 01_exploration.ipynb # Analyse exploratoire des données (EDA) │ ├── 02_preprocessing.ipynb # Pré-traitement des données │ ├── 03_clustering_models.ipynb # Expérimentation avec différents modèles de clustering │ └── 04_evaluation.ipynb # Évaluation et analyse comparative des résultats ├── scripts/ # Scripts pour exécuter les différentes étapes de l'analyse ├── results/ # Résultats et visualisations générés par les modèles ├── requirements.txt # Liste des dépendances Python nécessaires └── README.md # Fichier de description du projet
+
+
+---
+
+## Étapes du Projet
+
+### 1. Exploration des Données
+- Réalisation d'une analyse exploratoire (EDA) pour identifier :
+  - Les tendances,
+  - Les valeurs manquantes,
+  - Les outliers,
+  - Les relations entre les variables.
+- Visualisations pour une meilleure compréhension des données.
+
+### 2. Prétraitement
+- Normalisation et standardisation des données.
+- Encodage des variables catégoriques.
+- Réduction de dimension avec la PCA (Analyse en Composantes Principales).
+
+### 3. Modélisation
+- Clustering avec les algorithmes suivants :
+  - **K-Means**
+  - **Gaussian Mixture Models (GMM)**
+  - **Bisecting K-Means**
+- Détermination du nombre optimal de clusters à l'aide de :
+  - La silhouette,
+  - Le BIC,
+  - L'inertie intra-cluster.
+
+### 4. Évaluation
+- Comparaison des modèles en utilisant :
+  - **Silhouette Score**
+  - **Davies-Bouldin Index**
+  - **Log-likelihood** (pour GMM)
+  - **AIC et BIC** (pour GMM)
+
+---
+
+## Installation
+
+### Prérequis
+- **Python 3.8 ou supérieur**
+- **Apache Spark**
+- **Jupyter Notebook**
+
+### Installation des Dépendances
+1. Clonez le projet :
+   ```bash
+   git clone https://github.com/votre-utilisateur/votre-projet.git
+   cd votre-projet
+
+2. Installez les dépendances :
+Copier le code
+```bash
+pip install -r requirements.txt
+```
+
+## Utilisation
+
+### Lancer les Notebooks
+1. Clonez le projet depuis le dépôt GitHub :
+   ```bash
+   git clone https://github.com/votre-utilisateur/votre-projet.git
+   cd votre-projet
+
