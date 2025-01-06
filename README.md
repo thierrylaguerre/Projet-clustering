@@ -19,13 +19,10 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
 ```
 ├── data/ # Dossier contenant les jeux de données bruts et traités
 ├── notebooks/ # Notebooks Jupyter pour exploration et expérimentation
-│ ├── 01_exploration.ipynb # Analyse exploratoire des données (EDA)
-│ ├── 02_preprocessing.ipynb # Pré-traitement des données
-│ ├── 03_clustering_models.ipynb # Expérimentation avec différents modèles de clustering
-│ └── 04_evaluation.ipynb # Évaluation et analyse comparative des résultats
-├── scripts/ # Scripts pour exécuter les différentes étapes de l'analyse
-├── results/ # Résultats et visualisations générés par les modèles
-├── requirements.txt # Liste des dépendances Python nécessaires └── README.md # Fichier de description du projet
+│ ├── projet_clutering.ipynb -> contenant le code du projet
+├── scripts/
+├── requirements.txt   -> Liste des dépendances Python nécessaires
+└── README.md -> Fichier de description du projet
 ```
 
 ---
