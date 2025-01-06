@@ -18,9 +18,9 @@ L'approche consiste à :
 Le projet est organisé de manière professionnelle selon la structure suivante :
 ```
 ├── data/ # Dossier contenant les jeux de données bruts et traités
-├── notebooks/ # Notebooks Jupyter pour exploration et expérimentation
+| ├── données_brute.csv -> contenant les données brutes
+├── notebooks/ -> Dossier contenant le fichier du projet
 │ ├── projet_clutering.ipynb -> contenant le code du projet
-├── scripts/
 ├── requirements.txt   -> Liste des dépendances Python nécessaires
 └── README.md -> Fichier de description du projet
 ```
@@ -33,7 +33,6 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
 - Réalisation d'une analyse exploratoire (EDA) pour identifier :
   - Les tendances,
   - Les valeurs manquantes,
-  - Les outliers,
   - Les relations entre les variables.
 - Visualisations pour une meilleure compréhension des données.
 
@@ -47,6 +46,7 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
   - **K-Means**
   - **Gaussian Mixture Models (GMM)**
   - **Bisecting K-Means**
+    
 - Détermination du nombre optimal de clusters à l'aide de :
   - La silhouette,
   - Le BIC,
@@ -71,8 +71,9 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
 ### Installation des Dépendances
 1. Clonez le projet :
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-projet.git
-   cd votre-projet
+   git clone https://github.com/thierrylaguerre/Projet-clustering.git
+   cd Projet-clustering
+   ```
 
 2. Installez les dépendances :
    ```bash
@@ -141,3 +142,11 @@ L'objectif principal de ce projet est de segmenter efficacement les clients afin
 - Comparaison des résultats des algorithmes de clustering (K-Means, GMM, Bisecting K-Means) à l'aide des métriques suivantes :
   - Silohouette score pour les trois algorithmes.
   - Log-likelihood, BIC et AIC pour GMM.
+  
+---
+
+## Conclusion
+
+Après avoir comparé les trois algorithmes sur la base de plusieurs métriques (Silhouette Score, Log-Likelihood, AIC, BIC), K-Means s'est révélé être le plus performant pour ce projet de segmentation des clients. Sa simplicité, son efficacité, sa capacité à générer des clusters homogènes et bien séparés, ainsi que sa stabilité dans les résultats en font le choix optimal pour l'objectif de segmentation.
+
+L'algorithme K-Means a donc été retenu pour la segmentation des clients, et il est utilisé pour ajuster les stratégies marketing et améliorer les performances commerciales.
