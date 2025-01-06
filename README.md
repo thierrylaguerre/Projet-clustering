@@ -70,16 +70,20 @@ Le projet est organisé de manière professionnelle selon la structure suivante 
    cd votre-projet
 
 2. Installez les dépendances :
-Copier le code
-```bash
-pip install -r requirements.txt
-```
+   ```bas
+   pip install -r requirements.txt
+   ```
 
 ## Utilisation
 
-### Lancer les Notebooks
-1. Clonez le projet depuis le dépôt GitHub :
+### Lancer le fichier .ipynb
+1. Lancez Jupyter Notebook :
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-projet.git
-   cd votre-projet
-
+   jupyter notebook
+   ```
+2. Ouvrez le fichier notebooks/projet_clutering.ipynb.
+Ce fichier contient tout le code pour :
+* Explorer les données.
+* Effectuer le prétraitement.
+* Appliquer des modèles de clustering (K-Means, GMM, Bisecting K-Means).
+* Évaluer les performances des modèles.
