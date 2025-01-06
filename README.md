@@ -17,12 +17,12 @@ L'approche consiste à :
 
 Le projet est organisé de manière professionnelle selon la structure suivante :
 ```
-├── data/ # Dossier contenant les jeux de données bruts et traités
-| ├── données_brute.csv -> contenant les données brutes
-├── notebooks/ -> Dossier contenant le fichier du projet
-│ ├── projet_clutering.ipynb -> contenant le code du projet
-├── requirements.txt   -> Liste des dépendances Python nécessaires
-└── README.md -> Fichier de description du projet
+├── data/                                        -> Dossier contenant les jeux de données bruts et traités
+| ├── données_brute.csv                          -> contenant les données brutes
+├── notebooks/                                   -> Dossier contenant le fichier du projet
+│ ├── projet_clutering.ipynb                     -> contenant le code du projet
+├── requirements.txt                             -> Liste des dépendances Python nécessaires
+└── README.md                                    -> Fichier de description du projet
 ```
 
 ---
